@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1015675317858",
+    "project_id": "hangman-654e1",
+    "storage_bucket": "hangman-654e1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015675317858:android:274f0a8797bb221a75eb3b",
+        "android_client_info": {
+          "package_name": "com.example.hangman7"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhL_rbzh06S4thEZrP0owFk7vkQXNYbic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">hangman7</string>
+    <string name="click_game_mode">click game mode</string>
+    <string name="enter_input">enter input</string>
+    <string name="collection">collection</string>
+    <string name="computer">computer</string>
+    <string name="theme">theme</string>
+    <string name="hangmag">hangmag:</string>
+    <string name="random">random</string>
+    <string name="guess">guess</string>
+    <string name="input">input</string>
+</resources>
