@@ -6,27 +6,43 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InputActivity">
+    tools:context=".InputActivity"
+    android:background="@drawable/background2">
 
 
-    <EditText
-        android:id="@+id/tvInput"
+    <LinearLayout
+        android:layout_marginTop="200dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="enter word here"
-        android:textSize="40sp" />
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@drawable/list1">
+         <EditText
+             android:layout_margin="15dp"
+             android:id="@+id/tvInput"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:hint="enter word here"
 
-    <Button
-        android:id="@+id/btnEnter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="enter"
-        android:textSize="30sp" />
+             android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/btnxxx"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="input here"
-        android:textSize="40sp" />
+         <Button
+             android:id="@+id/btnEnter"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="send"
+             android:backgroundTint="@color/black"
+             android:layout_gravity="center"
+             android:textSize="30sp"
+             />
+
+         <TextView
+             android:id="@+id/tvText"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text=""
+             android:textSize="35sp"
+             android:layout_gravity="center"
+             android:layout_margin="15dp"/>
+    </LinearLayout>
 </LinearLayout>

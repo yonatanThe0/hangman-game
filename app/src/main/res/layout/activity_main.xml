@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background2"
+    android:background="@drawable/background1"
     android:orientation="vertical"
     tools:context="MainActivity"
     tools:ignore="ExtraText">
@@ -14,7 +14,7 @@
         android:layout_width="236dp"
         android:layout_height="69dp"
         android:layout_gravity="center"
-        android:background="@drawable/picture1"
+        android:background="@drawable/title1"
         android:layout_marginTop="10sp"/>
 
     <ImageView
@@ -22,7 +22,7 @@
         android:layout_height="62dp"
         android:layout_gravity="center"
         android:layout_marginTop="30sp"
-        android:background="@drawable/picture2" />
+        android:background="@drawable/title2" />
 
 
     <LinearLayout
@@ -158,5 +158,5 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10sp"
-        android:background="@drawable/picture3" />
+        android:background="@drawable/picture1" />
 </LinearLayout>

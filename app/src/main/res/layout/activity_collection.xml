@@ -7,80 +7,143 @@
     android:layout_height="match_parent"
     tools:context=".CollectionActivity"
     android:orientation="vertical"
-    android:background="@drawable/background3">
+    android:background="@drawable/background2">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="select catagory:"
-        android:textSize="50sp" />
+    <ImageView
+        android:layout_width="327dp"
+        android:layout_height="62dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/title3" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp">
 
-        <Button
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Food"
-            android:textSize="20sp"
-            android:id="@+id/btnfood" />
+            android:layout_margin="10dp"
+            android:background="@drawable/list1">
 
-        <Button
+            <Button
+                android:id="@+id/btnanimal"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:backgroundTint="#00000000"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="114dp"
+                android:background="@drawable/icon2"
+                android:layout_margin="30dp"/>
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="animal"
-            android:textSize="20sp"
-            android:id="@+id/btnanimal" />
+            android:layout_margin="10dp"
+            android:background="@drawable/list1">
+
+            <Button
+                android:id="@+id/btnfood"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:backgroundTint="#00000000"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="114dp"
+                android:background="@drawable/icon1"
+                android:layout_margin="30dp"/>
+        </FrameLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:orientation="horizontal">
 
-        <Button
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="famous"
-            android:textSize="20sp"
-            android:id="@+id/btnfamous" />
+            android:layout_margin="10dp"
+            android:background="@drawable/list1">
+            <Button
+                android:id="@+id/btncar"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:backgroundTint="#00000000"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="114dp"
+                android:background="@drawable/icon4"
+                android:layout_margin="30dp"/>
+        </FrameLayout>
 
-        <Button
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="car"
-            android:textSize="20sp"
-            android:id="@+id/btncar" />
+            android:layout_margin="10dp"
+            android:background="@drawable/list1">
+            <Button
+                android:id="@+id/btnfamous"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:backgroundTint="#00000000"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="114dp"
+                android:background="@drawable/icon3"
+                android:layout_margin="30dp"/>
+        </FrameLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:orientation="horizontal">
 
-        <Button
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="country"
-            android:textSize="20sp"
-            android:id="@+id/btncountry" />
+            android:layout_margin="10dp"
+            android:background="@drawable/list1">
+            <Button
+                android:id="@+id/btncity"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:backgroundTint="#00000000"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="114dp"
+                android:background="@drawable/icon6"
+                android:layout_margin="30dp"/>
+        </FrameLayout>
 
-        <Button
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="city"
-            android:textSize="20sp"
-            android:id="@+id/btncity" />
+            android:layout_margin="10dp"
+            android:background="@drawable/list1">
+            <Button
+                android:id="@+id/btncountry"
+                android:layout_width="match_parent"
+                android:layout_height="170dp"
+                android:backgroundTint="#00000000"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="114dp"
+                android:background="@drawable/icon5"
+                android:layout_margin="30dp"/>
+        </FrameLayout>
     </LinearLayout>
 
 </LinearLayout>

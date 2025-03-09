@@ -7,7 +7,6 @@ public class FbModule {
     private DatabaseReference databaseReference;
 
     public FbModule() {
-        // Initialize Firebase reference
         databaseReference = FirebaseDatabase.getInstance().getReference("path");
     }
 

@@ -5,31 +5,22 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WaitingActivity"
-    android:orientation="vertical">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="waiting room"
-        android:textSize="50sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="wait to player to enter"
-        android:textSize="40sp" />
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background2"
+    tools:context=".WaitingActivity">
 
-    <Button
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="check"
-        android:textSize="40sp"
-        android:id="@+id/btnCheck" />
+        android:layout_gravity="center"
+        android:background="@drawable/title4"
+        android:layout_margin="15dp"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="result here"
-        android:id="@+id/tvResult"
-        android:textSize="30sp"/>
-
+        android:text="Wait for the player to send"
+        android:textSize="30dp"/>
 
 </LinearLayout>

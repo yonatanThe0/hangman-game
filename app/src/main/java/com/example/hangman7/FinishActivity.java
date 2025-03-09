@@ -9,9 +9,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class FinishActivity extends AppCompatActivity implements View.OnClickListener {
-    TextView tvTitle;
-    Button btnClick1,btnClick2;
-    String mode,word,check;
+    private TextView tvTitle;
+    private Button btnClick1,btnClick2;
+    private String mode,word,check;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,12 +31,11 @@ public class FinishActivity extends AppCompatActivity implements View.OnClickLis
         btnClick1.setOnClickListener(this);
         btnClick2.setOnClickListener(this);
 
-        tvTitle.setText("Default Text");
 
         if ("win".equals(check)) {
             tvTitle.setText("Nice! You win!");
         } else if ("loss".equals(check)) {
-            tvTitle.setText("You lost! Try again. The word was " + word);
+            tvTitle.setText("You lost!  The word was " + word);
         }
     }
 
@@ -58,7 +57,7 @@ public class FinishActivity extends AppCompatActivity implements View.OnClickLis
             }
             if (mode.equals("random")){
                 Intent i = new Intent(this, GameActivity.class);
-                String word = null;
+                String word;
                 try {
                     word = RandomWord.GetRandomWord();
                 } catch (Exception e) {

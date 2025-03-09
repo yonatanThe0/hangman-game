@@ -9,19 +9,18 @@ import android.view.View;
 
 public class HangmanView extends View {
     private Paint p;
-    private int step = 0; // Track the  step
+    private int step = 0,i = 0;
     private final Handler handler = new Handler();
-    private  int x=0,i=0;
+
 
     public HangmanView(Context context) {
         super(context);
         init();
     }
-
     private void init() {
         p = new Paint();
-        p.setColor(Color.BLACK);
         p.setStrokeWidth(10);
+        p.setColor(Color.BLACK);
         p.setStyle(Paint.Style.STROKE);
     }
 
@@ -51,9 +50,8 @@ public class HangmanView extends View {
         }
 
         if (step==2) {
-            if (x == 0) {i = 250;x = 1;}
-            canvas.drawLine(400, 250, 400, i, p);
-            animationLine(i, 400);
+            canvas.drawLine(400, 250, 400, 250+i, p);
+            animationLine(i, 150);
         }
         if (step==3){
             canvas.drawLine(400,300,400-i,300+i,p);
@@ -89,7 +87,6 @@ public class HangmanView extends View {
     public void setWrongGuesses(int mistake) {
         this.step = mistake; // Update the number of mistakes
         i=0;
-        x=0;//תכלס לא צריך
         invalidate(); // Redraw the view
     }
 }

@@ -2,59 +2,48 @@ package com.example.hangman7;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.util.Log;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.ValueEventListener;
 
-public class WaitingActivity extends AppCompatActivity implements View.OnClickListener {
-    private Button btnCheck;
-    private TextView tvResult;
-    private FbModule FbMoudle;
+public class WaitingActivity extends AppCompatActivity {
 
+    private FbModule fbModule;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting);
 
-        btnCheck = findViewById(R.id.btnCheck);
-        tvResult = findViewById(R.id.tvResult);
-        FbMoudle = new FbModule();
-        FbMoudle.saveNewW("");
+        fbModule = new FbModule();
+        fbModule.saveNewW("");
 
-        btnCheck.setOnClickListener(this);
+        // Add continuous listener for changes in newW
+        fbModule.getNewWReference().addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String newWord = snapshot.getValue(String.class);
+                if (newWord != null && !newWord.isEmpty()) {
+                    Intent intent = new Intent(WaitingActivity.this, GameActivity.class);
+                    intent.putExtra("EXTRA_WORD", newWord);
+                    intent.putExtra("SAVE_MODE", "guess");
+                    startActivity(intent);
 
-    }
-
-    @Override
-    public void onClick(View v) {
-        if (v == btnCheck) {
-            FbMoudle.getNewWReference().addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot snapshot) {
-                    String newW = snapshot.getValue(String.class);
-                    if (newW != null && !newW.isEmpty()) { // Check if newW is not null and not empty
-                        tvResult.setText("the game loading");
-                        Intent i = new Intent(WaitingActivity.this, GameActivity.class);
-                        i.putExtra("EXTRA_WORD", newW);
-                        i.putExtra("SAVE_MODE", "guess");
-                        startActivity(i);
-                    } else {
-                        tvResult.setText("wait to player to enter");
-                    }
                 }
+            }
 
-                @Override
-                public void onCancelled(DatabaseError error) {
-                    tvResult.setText("Error: " + error.getMessage());
-                }
-            });
-        }
+            @Override //catch error for new ValueEventListener() line29 end
+            public void onCancelled(@NonNull DatabaseError error) {
+                Log.e("FirebaseError", "Database error: " + error.getMessage());
+                Toast.makeText(WaitingActivity.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
